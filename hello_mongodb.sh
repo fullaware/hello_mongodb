@@ -1,7 +1,10 @@
 # This will install and and test Nodejs + MongoDB 3.x
 # on CentOS 6.x
+
 echo $'\n ###  Run as root  ###\n'
+
 echo $'\n ###  Creating /etc/yum.repos.d/mongodb-org-3.0.repo  ###\n'
+
 cat > /etc/yum.repos.d/mongodb-org-3.0.repo << EOF
 [mongodb-org-3.0]
 name=MongoDB Repository
@@ -12,8 +15,10 @@ EOF
 
 echo $'\n ###  Installing Extra Packages for Enterprise Linux 6.x [EPEL]  ###\n'
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+
 echo $'\n ###  Installing nodejs  ###\n'
 yum install -y nodejs npm gcc-c++ make --enablerepo=epel
+
 echo $'\n ###  Installing mongodb-org  ###\n'
 yum install -y mongodb-org
 
