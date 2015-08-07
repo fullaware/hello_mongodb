@@ -73,6 +73,9 @@ EOF
 echo $'\n ###  Running 'npm install' in hello_world_mongodb folder  ###\n'
 npm install
 
+echo $'\n ###  Start mongod service  ###\n'
+service mongod start
+
 echo $'\n ###  Populating mongodb 'coll' collection with "name" : "MongoDB"  ###\n'
 mongo --eval 'db.coll.save({"name":"MongoDB"});'
 
