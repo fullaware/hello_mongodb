@@ -1,5 +1,5 @@
 # hello_mongodb
-Install and test Nodejs + MongoDB 3.x on CentOS 6.x  
+Install and test Nodejs + MongoDB 3.x on CentOS 6.x (or 7) 
 10 steps in all
 
 ```
