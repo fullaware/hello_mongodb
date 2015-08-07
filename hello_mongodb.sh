@@ -1,5 +1,5 @@
 # This will install and and test Nodejs + MongoDB 3.x
-# on CentOS 6.x
+# on CentOS 6.x or 7
 
 echo $'\n ###  Run as root  ###\n'
 
@@ -13,8 +13,11 @@ gpgcheck=0
 enabled=1
 EOF
 
-echo $'\n ###  Installing Extra Packages for Enterprise Linux 6.x [EPEL]  ###\n'
+echo $'\n ###  Installing Extra Packages for Enterprise Linux [EPEL]  ###\n'
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+
+##   Uncomment to use EPEL for CentOS/RHEL 7
+#yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 echo $'\n ###  Installing nodejs  ###\n'
 yum install -y nodejs npm gcc-c++ make --enablerepo=epel
